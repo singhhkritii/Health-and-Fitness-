@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginui/customwidget/customtextfield.dart';
+import 'package:loginui/screens/input_page.dart';
 
 class SignUpScreen extends StatelessWidget {
   @override
@@ -51,13 +52,6 @@ class SignUpScreen extends StatelessWidget {
                 height: 15,
               ),
               CustomTextField(
-                hint: '    enter your Phone',
-                issecured: false,
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextField(
                 hint: '    enter your Password',
                 issecured: true,
               ),
@@ -70,7 +64,12 @@ class SignUpScreen extends StatelessWidget {
                     minWidth: MediaQuery.of(context).size.width,
                     height: 55,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => InputPage(),
+                        ),
+                        );
+                      },
                       child: Text(
                         'Create',
                         style: TextStyle(color: Colors.grey, fontSize: 22),

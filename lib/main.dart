@@ -14,6 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+        theme: ThemeData.dark().copyWith(
+      primaryColor: Color(0xff1A237E),
+      accentColor: Color(0xff00838F),
+      scaffoldBackgroundColor: Color(0xff0D47A1),
+        ),
       home: WelcomeScreen(),
     );
   }
@@ -48,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                 height: 120,
               ),
               Text(
-                'Books World',
+                'Healthy LifeStyle',
                 style: TextStyle(
                     fontFamily: 'Camar', color: Colors.white, fontSize: 30),
               ),
@@ -56,12 +61,12 @@ class WelcomeScreen extends StatelessWidget {
                 height: 20,
               ),
               Container(
-                  height: 260, child: Image(image: AssetImage('images/2.png'))),
+                  height: 260, child: Image(image: AssetImage('images/welcome.jpg'))),
               SizedBox(
                 height: 15,
               ),
               Text(
-                'All Books In 1 Place',
+                'Stay Fit and Healthy',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 22,
@@ -87,3 +92,4 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 }
+

@@ -1,7 +1,7 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:loginui/customwidget/customtextfield.dart';
+import 'package:loginui/screens/input_page.dart';
 import 'package:loginui/signupscren.dart';
 
 class Loginscreen extends StatelessWidget {
@@ -97,7 +97,12 @@ class Loginscreen extends StatelessWidget {
                     minWidth: MediaQuery.of(context).size.width,
                     height: 55,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => InputPage(),
+                        ),
+                        );
+                      },
                       child: Text(
                         'Log in',
                         style: TextStyle(color: Colors.grey, fontSize: 22),
@@ -109,36 +114,14 @@ class Loginscreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              Center(
-                child: Text(
-                  'OR',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
               SizedBox(
                 height: 20,
-              ),
-              Container(
-                height: 60,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Image(image: AssetImage('images/fb.png')),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Image(image: AssetImage('images/google.png'))
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 25,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Don't Have an Accout ?",
+                    "Don't Have an Account ?",
                     style: TextStyle(color: Colors.white),
                   ),
                   SizedBox(
@@ -153,6 +136,7 @@ class Loginscreen extends StatelessWidget {
                       'Sign up',
                       style: TextStyle(
                           decoration: TextDecoration.underline,
+                          fontSize: 25,
                           fontWeight: FontWeight.w500,
                           color: Colors.white),
                     ),
