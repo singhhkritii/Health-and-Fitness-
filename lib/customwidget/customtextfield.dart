@@ -9,7 +9,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.only(left: 25, right: 25),
+        padding: const EdgeInsets.only(left: 30, right: 30),
         child: TextField(obscureText: issecured,
           cursorColor: Colors.white,
           style: TextStyle(color: Colors.white),
@@ -20,8 +20,7 @@ class CustomTextField extends StatelessWidget {
               ),
               hintText: hint,
               hintStyle: TextStyle(
-                  fontSize: 18,
-                  letterSpacing: 1.5,
+                  fontSize: 15,
                   color: Colors.white70,
                   fontWeight: FontWeight.w900),
               filled: true,

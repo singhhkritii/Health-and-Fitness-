@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:loginui/customwidget/customtextfield.dart';
 import 'package:loginui/screens/input_page.dart';
 import 'package:loginui/signupscren.dart';
+import 'package:loginui/welcomePage.dart';
 
 class Loginscreen extends StatelessWidget {
   @override
@@ -12,9 +13,9 @@ class Loginscreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/1.png'), fit: BoxFit.cover),
+              image: AssetImage('images/login.png'), fit: BoxFit.cover),
           gradient: LinearGradient(
-              colors: [Colors.blue[400], Colors.blue],
+              colors: [Colors.amber[500], Colors.amber[600]],
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter),
         ),
@@ -22,42 +23,42 @@ class Loginscreen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 180,
+                height: 140,
               ),
               Row(
                 children: <Widget>[
                   SizedBox(
-                    width: 40,
+                    width: 35,
                   ),
                   Text(
                     'Welcome Back',
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 35),
+                        fontSize: 28),
                   ),
                 ],
               ),
               SizedBox(
-                height: 20,
+                height: 15,
               ),
               Row(
                 children: <Widget>[
                   SizedBox(
-                    width: 40,
+                    width: 35,
                   ),
                   Text(
                     'Sign in with your account',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(color: Colors.white, fontSize: 14),
                   )
                 ],
               ),
               SizedBox(
-                height: 65,
+                height: 50,
               ),
               CustomTextField(
                 issecured: false,
-                hint: '    Email/Phone',
+                hint: '  Email/Phone',
               ),
               SizedBox(
                 height: 20,
@@ -91,15 +92,15 @@ class Loginscreen extends StatelessWidget {
                 height: 20,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 25, right: 25),
+                padding: const EdgeInsets.only(left: 30, right: 30),
                 child: ButtonTheme(
                     buttonColor: Colors.white,
                     minWidth: MediaQuery.of(context).size.width,
-                    height: 55,
+                    height: 50,
                     child: RaisedButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => InputPage(),
+                            builder: (context) => welcomePage(),
                         ),
                         );
                       },

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginui/Diet/Snack.dart';
 
 class Lunch extends StatelessWidget {
   @override
@@ -12,23 +13,31 @@ class Lunch extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.all(20.0),
-              child: Image.asset('images/.jpg'),
+              child: Image.asset('images/lunch1.jpg'),
             ),
             Container(
               padding: EdgeInsets.all(20.0),
-              child: Image.asset('images/.jpg'),
+              child: Image.asset('images/lunch2.jpg'),
             ),
             Container(
               padding: EdgeInsets.all(20.0),
-              child: Image.asset('images/.jpg'),
+              child: Image.asset('images/lunch3.jpg'),
             ),
             Container(
               padding: EdgeInsets.all(20.0),
-              child: Image.asset('images/.jpg'),
+              child: Image.asset('images/lunch4.jpg'),
             ),
             Container(
               padding: EdgeInsets.all(20.0),
-              child: Image.asset('images/.jpg'),
+              child: Image.asset('images/lunch5.jpg'),
+            ),
+            Container(
+              padding: EdgeInsets.all(20.0),
+              child: Image.asset('images/lunch6.jpg'),
+            ),
+            Container(
+              padding: EdgeInsets.all(20.0),
+              child: Image.asset('images/lunch7.jpg'),
             ),
           ],
         ),
@@ -36,7 +45,12 @@ class Lunch extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.white,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) => Snack(),
+          ),
+          );
+        },
         child: Icon(Icons.arrow_forward),
       ),
     );

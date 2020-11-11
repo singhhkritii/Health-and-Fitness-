@@ -35,6 +35,14 @@ class Breakfast extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: Image.asset('images/breakfast6.jpg'),
             ),
+            Container(
+              padding: EdgeInsets.all(20.0),
+              child: Image.asset('images/breakfast7.jpg'),
+            ),
+            Container(
+              padding: EdgeInsets.all(20.0),
+              child: Image.asset('images/breakfast8.jpg'),
+            ),
           ],
         ),
 

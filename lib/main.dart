@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:loginui/loginscreen.dart';
+import 'package:loginui/welcomePage.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
 void main() {
@@ -14,21 +15,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-        theme: ThemeData.dark().copyWith(
-      primaryColor: Color(0xff1A237E),
-      accentColor: Color(0xff00838F),
-      scaffoldBackgroundColor: Color(0xff0D47A1),
-        ),
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Color(0xffffc107),
+        accentColor: Color(0xffffca28),
+        scaffoldBackgroundColor: Color(0xffffc107),
+      ),
       home: WelcomeScreen(),
     );
   }
 }
 
-
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Timer(Duration(milliseconds: 2500), () {
+    Timer(Duration(milliseconds: 3500), () {
       Navigator.push(
           context,
           MaterialPageRoute(
@@ -36,13 +36,13 @@ class WelcomeScreen extends StatelessWidget {
           ));
     });
 
-    return Scaffold( 
+    return Scaffold(
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('images/1.png'), fit: BoxFit.cover),
+                image: AssetImage('images/welcome.gif'), fit: BoxFit.cover),
             gradient: LinearGradient(
-                colors: [Colors.blue, Colors.blue[300]],
+                colors: [Colors.amber[500], Colors.amber[600]],
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter)),
         child: Center(
@@ -61,12 +61,13 @@ class WelcomeScreen extends StatelessWidget {
                 height: 20,
               ),
               Container(
-                  height: 260, child: Image(image: AssetImage('images/welcome.jpg'))),
+                height: 260,
+              ),
               SizedBox(
                 height: 15,
               ),
               Text(
-                'Stay Fit and Healthy',
+                '',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 22,
@@ -81,7 +82,7 @@ class WelcomeScreen extends StatelessWidget {
                 lineHeight: 4.0,
                 animation: true,
                 percent: 1.0,
-                animationDuration: 2250,
+                animationDuration: 3500,
                 backgroundColor: Colors.grey,
                 progressColor: Colors.white,
               ),
@@ -92,4 +93,3 @@ class WelcomeScreen extends StatelessWidget {
     );
   }
 }
-

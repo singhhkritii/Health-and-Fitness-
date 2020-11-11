@@ -10,49 +10,49 @@ class SignUpScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('images/1.png'), fit: BoxFit.cover),
+              image: AssetImage('images/3.png'), fit: BoxFit.cover),
           gradient: LinearGradient(
-              colors: [Colors.blue[400], Colors.blue],
+              colors: [Colors.amber[400], Colors.amber[600]],
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter),
         ),
         child: Center(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 180,),
+              SizedBox(height: 150,),
                Row(
                 children: <Widget>[
                   SizedBox(
-                    width: 40,
+                    width: 35,
                   ),
                   Text(
                     'Create Account',
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 35),
+                        fontSize: 30),
                   ),
                 ],
               ),
               SizedBox(
-                height: 110,
+                height: 60,
               ),
               CustomTextField(
-                hint: '    enter your name',
+                hint: '    Enter your name',
                 issecured: false,
               ),
               SizedBox(
                 height: 15,
               ),
               CustomTextField(
-                hint: '    enter your Email',
+                hint: '    Enter your Email',
                 issecured: false,
               ),
               SizedBox(
                 height: 15,
               ),
               CustomTextField(
-                hint: '    enter your Password',
+                hint: '    Enter your Password',
                 issecured: true,
               ),
               SizedBox(
@@ -62,7 +62,7 @@ class SignUpScreen extends StatelessWidget {
                 child: ButtonTheme(
                     buttonColor: Colors.white,
                     minWidth: MediaQuery.of(context).size.width,
-                    height: 55,
+                    height: 53,
                     child: RaisedButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
